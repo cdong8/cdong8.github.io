@@ -1,85 +1,135 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@import 'libs/skel';
 
 /*
-	Future Imperfect by HTML5 UP
+	Tessellate by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-$palette-border: #dedede;
+/* Basic */
 
-/* Button */
+	.image {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
+		img {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+		}
+	}
+
 	.button {
-		border: solid 1px $palette-border;
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+	}
+
+/* Section/Article */
+
+	section > .last-child,
+	article > .last-child,
+	section.last-child,
+	article.last-child {
+		margin-bottom: 0;
+	}
+
+/* List */
+
+	ul.icons {
+		a {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+			border: solid 1px #ddd;
+		}
 	}
 
 /* Form */
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="tel"],
-	select,
-	textarea {
-		border: solid 1px $palette-border;
-	}
+	form {
+		input.text,
+		select,
+		.select,
+		textarea {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+			border: solid 1px #ddd;
+			line-height: 1.25em;
+		}
 
-/* Post */
+		select {
+			position: relative;
 
-	.post {
-		border: solid 1px $palette-border;
+			option {
+				color: #000;
+			}
+		}
 
-		> header {
-			border-bottom: solid 1px $palette-border;
+		.select {
+			select {
+				width: 100%;
+			}
+
+			&:before {
+				display: none;
+			}
 		}
 	}
 
-/* Mini Post */
+/* Button */
 
-	.mini-post {
-		border: solid 1px $palette-border;
+	.button {
+		&.alt {
+			border: solid 1px #ddd;
+		}
+	}
+
+/* Feature Icon */
+
+	.feature-icon {
+		padding-bottom: 0;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+
+		.icon {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+			background: #fff;
+
+			&:before {
+				font-size: 6em;
+				color: #3d3d3d;
+			}
+		}
 	}
 
 /* Header */
 
 	#header {
-		border-bottom: solid 1px $palette-border;
+		background-image: url('../../images/header.jpg');
+		background-size: cover;
+		background-position: auto;
+		background-repeat: no-repeat;
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+	}
 
-		.links {
-			border-left: solid 1px $palette-border;
-		}
+/* Main Sections */
 
-		.main {
-			ul {
-				li {
-					border-left: solid 1px $palette-border;
-				}
+	.main {
+		> .content {
+			&.style1 {
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#412e4c, endColorstr=#a56365);
 			}
-		}
-	}
 
-/* Sidebar */
+			&.style2 {
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#85505f, endColorstr=#384955);
+			}
 
-	#sidebar {
-		> * {
-			border-top: solid 1px $palette-border;
-		}
-	}
-
-/* Menu */
-
-	#menu {
-		border-left: solid 1px $palette-border;
-
-		> * {
-			border-top: solid 1px $palette-border;
+			&.style3 {
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#2f394e, endColorstr=#5f796b);
+			}
 		}
 	}
